@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poll Simulator</title>
+</head>
+
+<body>
+  <center>
+    {{!-- <div
+      style="position: absolute; left: 15%; margin-left: 225px; width: 550px; height: 350px;border: 3px solid black">
+      --}}
+      <h1 style="text-decoration: underline;margin-left: 20px;color: lightseagreen;">Poll Summary</h1>
+      {{#each cans}}
+      <p>{{this.name}} ==> {{this.votes}}</p>
+      {{/each}}
+      <center><a style=" font-size:2em;color:brown;" href="/">Home</h2></a></center>
+      {{!--
+    </div> --}}
+  </center>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll Simulator</title>
+</head>
+
+<body>
+    <center>
+        {{!-- <div
+            style="position: absolute; left: 15%; margin-left: 225px; width: 550px; height: 350px;border: 3px solid black">
+            --}}
+            <h1 style="text-decoration: underline;">Voting</h1>
+            <form method="POST" action="/votecount">
+                <h3>Student ID: <input style="width:auto; height:30px;border-radius:30px;" type="text" name="id">
+                    </input> </h3>
+                {{#if cans.length}}
+                {{#each cans}}
+                <input type="radio" name="vote" value={{this.name}}>{{this.name}}</input>
+                <br /><br />
+                {{/each}}
+                {{/if}}
+                <br />
+                <button type="submit" style="background-color: #24fd1d; /* Green */
+  border-radius: 5px;width:12%;height:30px;color: white;">Submit</button>
+                <center>
+                    <h4 style="color: red;">{{msg}}</h4>
+                </center>
+            </form>
+            <br /><br />
+            <center><a style=" font-size:3em;color:brown;" href="/">Home</h2></a></center>
+    </center>
+    {{!-- </div> --}}
+</body>
+
+</html>

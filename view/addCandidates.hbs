@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll Simulator</title>
+</head>
+
+<body>
+    <div style="position: absolute; left: 15%; margin-left: 225px; width: 550px; height: auto;border: 3px solid black">
+        <h3 style="margin-left: 20px;">Add Candidates</h3>
+        <form action="/add" method="POST">
+            <input style="width:350px; margin-left:30px; height:30px;border-radius:30px;" name="name" type="text"
+                placeholder="Enter name here"> </input>
+            <button type="submit" style="margin-left:20px; background-color: #dbc236; /* Green */
+  border-radius: 5px;width:12%;height:30px;color: white;">Submit</button>
+        </form>
+        <hr>
+        <h3 style="margin-left: 20px;">Candidates :-</h3>
+        {{#if cans.length}}
+        {{#each cans}}
+        <p style="margin-left: 7%;">{{this.name}}</p>
+        {{/each}}
+        {{/if}}
+        <center><a style=" font-size:3em;color:brown;" href="/">Home</h2></a></center>
+    </div>
+</body>
+
+</html>
